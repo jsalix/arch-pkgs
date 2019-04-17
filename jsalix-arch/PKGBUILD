@@ -12,12 +12,14 @@ package_jsalix-base() {
     pkgdesc='Base system packages'
     depends=(
         'linux-zen'
+        'git'
         'overdue'
         's-tui'
         'neofetch'
         'p7zip'
         'zsh'
         'zsh-completions'
+        'antigen-git'
         'nmap'
         'networkmanager'
         'polkit'
@@ -27,7 +29,6 @@ package_jsalix-base() {
         'dmidecode'
         'cpupower'
         'chrony'
-        'antigen-git'
     )
 }
 
