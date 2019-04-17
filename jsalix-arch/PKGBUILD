@@ -1,0 +1,141 @@
+pkgbase=jsalix-arch
+pkgname=(jsalix-base jsalix-desktop jsalix-apps jsalix-default)
+pkgver=0.0.1
+pkgrel=1
+
+pkgdesc='Default packages and configuration for jsalix machines'
+url='https://github.com/jsalix/arch-pkgs'
+arch=('any')
+license=('GPL3')
+
+package_jsalix-base() {
+    pkgdesc='Base system packages'
+    depends=(
+        'linux-zen'
+        'overdue'
+        's-tui'
+        'neofetch'
+        'p7zip'
+        'zsh'
+        'zsh-completions'
+        'nmap'
+        'networkmanager'
+        'polkit'
+        'lm_sensors'
+        'htop'
+        'gotop-bin'
+        'dmidecode'
+        'cpupower'
+        'chrony'
+        'antigen-git'
+    )
+}
+
+package_jsalix-desktop() {
+    pkgdesc='i3 desktop environment'
+    depends=(
+        'xf86-video-vesa'
+        'xorg-bdftopcf'
+        'xorg-docs'
+        'xorg-font-util'
+        'xorg-fonts-100dpi'
+        'xorg-fonts-75dpi'
+        'xorg-fonts-encodings'
+        'xorg-iceauth'
+        'xorg-luit'
+        'xorg-mkfontscale'
+        'xorg-server'
+        'xorg-server-common'
+        'xorg-server-devel'
+        'xorg-server-xdmx'
+        'xorg-server-xephyr'
+        'xorg-server-xnest'
+        'xorg-server-xvfb'
+        'xorg-server-xwayland'
+        'xorg-sessreg'
+        'xorg-setxkbmap'
+        'xorg-smproxy'
+        'xorg-x11perf'
+        'xorg-xauth'
+        'xorg-xbacklight'
+        'xorg-xcmsdb'
+        'xorg-xcursorgen'
+        'xorg-xdpyinfo'
+        'xorg-xdriinfo'
+        'xorg-xev'
+        'xorg-xgamma'
+        'xorg-xhost'
+        'xorg-xinput'
+        'xorg-xkbcomp'
+        'xorg-xkbevd'
+        'xorg-xkbutils'
+        'xorg-xkill'
+        'xorg-xlsatoms'
+        'xorg-xlsclients'
+        'xorg-xmodmap'
+        'xorg-xpr'
+        'xorg-xprop'
+        'xorg-xrandr'
+        'xorg-xrdb'
+        'xorg-xrefresh'
+        'xorg-xset'
+        'xorg-xsetroot'
+        'xorg-xvinfo'
+        'xorg-xwd'
+        'xorg-xwininfo'
+        'xorg-xwud'
+        'pulseaudio'
+        'pulseaudio-alsa'
+        'pulseaudio-bluetooth'
+        'pasystray'
+        'i3-gaps-next-git'
+        'i3lock'
+        'polybar'
+        'lightdm'
+        'lightdm-webkit2-greeter'
+        'dunst'
+        'rofi'
+        'redshift'
+        'playerctl'
+        'pavucontrol'
+        'nitrogen'
+        'lxappearance-gtk3'
+        'mate-polkit'
+        'compton'
+        'blueman'
+        'bluez-utils'
+    )
+}
+
+package_jsalix-apps() {
+    pkgdesc='Commonly installed applications'
+    depends=(
+        'mpv'
+        'mpv-mpris'
+        'youtube-dl'
+        'spotifyd-pulseaudio'
+        'udiskie'
+        'visual-studio-code-bin'
+        'transmission-gtk'
+        'thunar'
+        'firefox'
+        'freerdp'
+        'libvncserver'
+        'remmina'
+        'mullvad-vpn'
+        'gimp'
+        'gucharmap'
+        'barrier'
+        'audacity'
+        'termite'
+    )
+}
+
+package_jsalix-default() {
+    pkgdesc='Includes base, desktop, and apps'
+    depends=(
+        'jsalix-base'
+        'jsalix-desktop'
+        'jsalix-apps'
+    )
+}
